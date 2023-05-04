@@ -34,13 +34,13 @@ header{
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 30px 18%;
+    padding: 30px 15%;
     transition: .3s;
 }
 
 .logo img {
     max-width: 100%;
-    width: 90px;
+    width: 93px;
     height: auto;
   }
   
@@ -93,6 +93,7 @@ header{
     font-size: var(--p-font);
     font-weight: 500;
     transition: ease .50s;
+    vertical-align: middle;
 }
 
 .top-btn:hover{
@@ -103,7 +104,7 @@ header{
 }
 
 section{
-    padding: 100px 12%;
+    padding: 100px 18%;
 }
 
 .home{
@@ -121,12 +122,15 @@ section{
 }
 
 .home-img img{
+    max-width: 130%;
     width: 500px;
-    height: 500px;
+    height:auto;
+    margin-top: 25px;
+    margin-left: -30px;
 }
 
 .home-text h1{
-    margin: 10px 0 25px;
+    margin: 10px 0 20px;
     font-size: var(--big-font);
     line-height: 1;
     font-weight: 500;
@@ -147,7 +151,7 @@ span{
     color: var(--main-color);
     font-size: 20px;
     font-weight: 500;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .home-text p {
@@ -155,15 +159,20 @@ span{
     color: var(--secound-color);
     line-height: 28px;
     margin-bottom: 20px;
+    text-align: justify;
+}
+
+.home .social{
+    margin-top: 30px;
 }
 
 .social a{
     width: 35px;
-    width: 35px;
+    height: 35px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: var(--main-color2);
+    background: var(--main-color);
     font-size: 17px;
     color: var(--bg-color);
     margin-right: 22px;
@@ -177,7 +186,7 @@ span{
     transition: .5s;
 }
 
-.btn{
+.home-text .btn{
     display: inline-block;
     color: var(--bg-color);
     background: var(--main-color);
@@ -192,4 +201,61 @@ span{
 
 .btn:hover{
     transform: scale(1.1);
+}
+
+header .bxl-github{
+    padding-right: 6px;
+    font-size: 25px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+header.sticky{
+    background: var(--bg-color);
+    padding: 13px 15%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+
+/*sub- service */
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.sub-box{
+    padding: 45px 45px 45px 45px;
+    transition: ease .50s;
+    cursor: pointer;
+}
+
+.sub-img img{
+    max-width: 100%;
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.sub-box h3{
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.sub-box p {
+    font-size: var(--p-font);
+    color: var(--secound-color);
+    line-height: 29px;
+}
+
+.sub-box:hover{
+    background: #fff;
+    box-shadow: 18px 0px 87px 0px rgb(10, 15, 70 / 7%);
+    border-radius: 15px;
+    will-change: transform;
+    transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05,1.05,1.05);
 }
