@@ -42,7 +42,7 @@ header {
 
 .logo img {
     max-width: 100%;
-    width: 93px;
+    width: 80px;
     height: auto;
 }
 
@@ -105,18 +105,16 @@ header {
     color: var(--bg-color);
 }
 
-
 .floating-button {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
     z-index: 9999;
-    margin: 16px 16px;
 }
 
 .share-button {
-    width: 9rem;
-    height: 5rem;
+    width: 8rem;
+    height: 4rem;
     background: var(--main-color);
     color: var(--bg-color);
     border-radius: 100px;
@@ -129,9 +127,9 @@ header {
     transition: .33 linear;
 }
 
-.share-button:hover{
+.share-button:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 10px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color), 0 0 200px var(--main-color);
+    box-shadow: 0 0 5px var(--main-color), 0 0 2px var(--main-color), 0 0 30px var(--main-color), 0 0 60px var(--main-color);
     width: 5rem;
     height: 12.25rem;
     transition: 0.5s ease-in-out;
@@ -144,7 +142,7 @@ header {
     background: var(--main-color);
     color: var(--bg-color);
     text-align: center;
-    line-height: 5rem;
+    line-height: 4rem;
     z-index: 999;
     transition: .43 linear;
     border-radius: 12px;
@@ -172,21 +170,23 @@ header {
 .share-button:hover a {
     opacity: 1;
     transform: translateX(0);
-    
+
 }
 
-.share-button a:nth-of-type(1){
-    transition-delay: 0.3s;
+.share-button a:nth-of-type(1) {
+    transition-delay: 0.5s;
 }
-.share-button a:nth-of-type(2){
-    transition-delay: 0.3s;
+
+.share-button a:nth-of-type(2) {
+    transition-delay: 0.4s;
 }
-.share-button a:nth-of-type(3){
+
+.share-button a:nth-of-type(3) {
     transition-delay: 0.3s;
 }
 
 section {
-    padding: 60px 18%;
+    padding: 55px 18%;
 }
 
 .home {
@@ -200,13 +200,14 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    grid-gap: 8rem;
+    grid-gap: 4rem;
 }
 
 .home-img img {
-    max-width: 125%;
+    max-width: 130%;
     width: 600px;
     height: auto;
+    margin-top: 50px;
 }
 
 .home-text h1 {
@@ -231,7 +232,7 @@ span {
     color: var(--main-color);
     font-size: 20px;
     font-weight: 500;
-    padding-top: 120px;
+    padding-top: 100px;
 }
 
 .home-text p {
@@ -302,12 +303,14 @@ header.sticky {
 .items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     align-items: center;
     text-align: center;
 }
 
 .sub-box {
+    box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
+    border-radius: 12px;
     padding: 45px 45px 45px 45px;
     transition: ease .50s;
     cursor: pointer;
@@ -329,11 +332,11 @@ header.sticky {
 .sub-box p {
     font-size: var(--p-font);
     color: var(--secound-color);
-    line-height: 29px;
+    line-height: 25px;
 }
 
 .sub-box:hover {
-    background: #fff;
+    background: #f7f6f4;
     box-shadow: 18px 0px 87px 0px rgb(10, 15, 70 / 7%);
     border-radius: 15px;
     will-change: transform;
@@ -373,6 +376,7 @@ header.sticky {
     color: var(--secound-color);
     line-height: 28px;
     margin-bottom: 25px;
+    text-align: justify;
 }
 
 /*portfolio*/
@@ -472,12 +476,35 @@ header.sticky {
 }
 
 .layer:hover a {
-    bottom: 45%;
+    bottom: 35%;
     opacity: 1;
-
 }
 
-.service-content{
+.layer a:hover, .layer #ademo:hover{
+    color: var(--main-color);
+    transform: translateX(-50%) scale(1.2);
+}
+
+.layer #ademo {
+    position: absolute;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--bg-color);
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transition: all 0.40s;
+}
+
+.layer:hover #ademo {
+    bottom: 20%;
+    opacity: 1;
+}
+
+/*Services*/
+
+.service-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, auto));
     grid-gap: 2rem;
@@ -485,7 +512,7 @@ header.sticky {
     margin-top: 2rem;
 }
 
-.row{
+.row {
     background: #fff;
     box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
     border-radius: 12px;
@@ -503,17 +530,25 @@ header.sticky {
     margin-bottom: 20px;
 }
 
-.s-four img{background: #baebcd;}
-.s-two img{background: #d9d1fa;}
-.s-three img{background: #faedce;}
+.s-four img {
+    background: #baebcd;
+}
 
-.row h3{
+.s-two img {
+    background: #d9d1fa;
+}
+
+.s-three img {
+    background: #faedce;
+}
+
+.row h3 {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 2px;
 }
 
-.row h5{
+.row h5 {
     font-size: 17px;
     font-weight: 500;
     margin-bottom: 19px;
@@ -530,7 +565,9 @@ header.sticky {
     transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05, 1.05, 1.05);
 }
 
-.cta-box{
+/*Contact*/
+
+.cta-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, auto));
     grid-gap: 2rem;
@@ -539,7 +576,7 @@ header.sticky {
     text-align: center;
 }
 
-.wrap{
+.wrap {
     background: #fff;
     box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
     border-radius: 12px;
@@ -548,11 +585,19 @@ header.sticky {
     cursor: pointer;
 }
 
-.one{background: #baebcd;}
-.two{background: #d9d1fa;}
-.three{background: #faedce;}
+.one {
+    background: #baebcd;
+}
 
-.wrap h3{
+.two {
+    background: #d9d1fa;
+}
+
+.three {
+    background: #faedce;
+}
+
+.wrap h3 {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 2px;
@@ -561,7 +606,8 @@ header.sticky {
 .wrap p {
     font-size: var(--p-font);
 }
-.contact{
+
+.contact {
     background: var(--main-color);
     width: 70%;
     margin: 100px auto;
@@ -575,21 +621,21 @@ header.sticky {
     background-size: cover;
 }
 
-.center h3{
+.center h3 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 3px;
     color: var(--bg-color);
 }
 
-.center p{
+.center p {
     font-size: var(--p-font);
     color: var(--bg-color);
     line-height: 26px;
     margin-bottom: 25px;
 }
 
-.contact .action form input[type="email"]{
+.contact .action form input[type="email"] {
     max-width: 100%;
     width: 470px;
     padding: 12px 15px;
@@ -601,7 +647,7 @@ header.sticky {
     border-radius: 30px;
 }
 
-.contact .action form input[type="submit"]{
+.contact .action form input[type="submit"] {
     padding: 12px 40px;
     background: #faedce;
     color: var(--text-color);
@@ -612,7 +658,7 @@ header.sticky {
     cursor: pointer;
 }
 
-.ends{
+.ends {
     text-align: center;
     padding: 40px;
 }
@@ -620,4 +666,122 @@ header.sticky {
 .ends p {
     font-size: var(--p-font);
     letter-spacing: 1px;
+    text-decoration: none;
+}
+
+@media (max-width: 1425px){
+
+    header{
+        padding: 16px 3%;
+        transition: .3s;
+    }
+
+    header.sticky{
+        padding: 10px 3%;
+        transition: .3s;
+    }
+
+    section{
+        padding: 60px 12%;
+        transition: .3s;
+    }
+
+    .home-img img {
+        max-width: 100%;
+        width: 400px;
+        height: auto;
+        margin-top: 25px;
+    }
+
+    .contact {
+        width: 95%;
+        transition: .3s;
+    }
+    :root{
+        --big-font: 4rem;
+        --h2-font:2.3rem;
+        --p-font: 1rem;
+        transition: .3s;
+    }
+}
+
+@media (max-width: 970px){
+    #menu-icon{
+        display: block;
+    }
+    .home{
+        min-height: 80vh;
+    }
+    .navlist{
+        position: absolute;
+        top: -600px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--main-color);
+        text-align: right;
+        transition: all .40s;
+    }
+
+    .navlist a{
+        display: block;
+        padding: 1.2rem;
+        margin: 1.5rem;
+        border-right: 2px solid var(--bg-color);
+    }
+
+    .navlist a:hover{
+        background: var(--bg-color);
+        color: var(--main-color);
+    }
+
+    .navlist a::after{
+        display: none;
+    }
+
+    .navlist.active{
+        top: 100%;
+    }
+}
+
+@media (max-width: 870px){
+    .home{
+        grid-template-columns: 1fr;
+        min-height: 130vh;
+        grid-gap: 1rem;
+    }
+    .home-text{
+        padding-top: 5px;
+    }
+
+    .home-img{
+        text-align: center;
+    }
+    .home-img img{
+        width: 440px;
+        height: auto;
+    }
+    .about {
+        grid-template-columns: 1fr;
+    }
+    .about-img{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    :root{
+        --big-font: 3.4rem;
+        --h2-font: 2rem;
+    }
+    
+    section{
+        padding: 50px 10%;
+        transition: .3s;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 540px){
+    .contact .action form input[type="email"]{
+        width: 310px;
+    }
 }
