@@ -58,7 +58,7 @@ header {
     font-size: var(--p-font);
     color: var(--text-color);
     font-weight: 500;
-    padding: 10px 27px;
+    padding: 10px 26px;
 }
 
 .navlist a::after {
@@ -193,7 +193,7 @@ section {
     min-height: 100vh;
     height: 100%;
     width: 100%;
-    background: url('/img/background.jpg');
+    background: url('./img/background.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -362,12 +362,14 @@ header.sticky {
     font-weight: 500;
     margin: 8px 0px 25px;
     line-height: 1.1;
+    text-align: left;
 }
 
 .about-text h3 {
     color: var(--main-color);
     font-size: 20px;
     font-weight: 500;
+    text-align: left;
 }
 
 .about-text p {
@@ -546,6 +548,7 @@ header.sticky {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 2px;
+    text-align: left;
 }
 
 .row h5 {
@@ -672,17 +675,17 @@ header.sticky {
 @media (max-width: 1425px){
 
     header{
-        padding: 16px 3%;
-        transition: .3s;
+        padding: 16px 18%;
+        transition: ease .25s;
     }
 
     header.sticky{
-        padding: 10px 3%;
-        transition: .3s;
+        padding: 10px 15%;
+        transition: ease .25s;
     }
 
     section{
-        padding: 60px 12%;
+        padding: 40px 18%;
         transition: .3s;
     }
 
@@ -690,7 +693,8 @@ header.sticky {
         max-width: 100%;
         width: 400px;
         height: auto;
-        margin-top: 25px;
+        margin-top: 36px;
+        padding-right: -500px;
     }
 
     .contact {
@@ -703,6 +707,29 @@ header.sticky {
         --p-font: 1rem;
         transition: .3s;
     }
+
+}
+
+@media(max-width: 1167px){
+
+    header{
+        padding: 16px 12%;
+        transition: ease .25s;
+    }
+
+    header.sticky{
+        padding: 10px 12%;
+        transition: ease .25s;
+    }
+
+    /*.top-btn {
+        padding: 9px 12px;
+        font-size: 17px
+    }
+
+    header .bxl-github {
+        font-size: 24px;
+    }*/
 }
 
 @media (max-width: 970px){
@@ -744,7 +771,7 @@ header.sticky {
     }
 }
 
-@media (max-width: 870px){
+@media (max-width: 860px){
     .home{
         grid-template-columns: 1fr;
         min-height: 130vh;
@@ -777,6 +804,10 @@ header.sticky {
         padding: 50px 10%;
         transition: .3s;
         text-align: justify;
+    }
+
+    .row h3 {
+        text-align: left;
     }
 }
 
